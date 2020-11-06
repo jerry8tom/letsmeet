@@ -20,7 +20,8 @@ export default function App() {
           style={styles.loginInput}
           selectionColor='white'
           textContentType="username"
-          placeholder="Username"
+          placeholder="Username/ Phone number/ Email" 
+          placeholderTextColor="grey"
         />
         <TextInput
           color="white"
@@ -29,6 +30,7 @@ export default function App() {
           secureTextEntry="true"
           textContentType="password"
           placeholder="Password"
+          placeholderTextColor="grey"
         />
         <Button style={styles.loginButton} color="pink" title="Sign in" />
         <Text style={styles.loginText}>Don't have an account?</Text>
@@ -55,6 +57,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: 'pink',
     alignSelf: 'center',
+    fontSize: 16,
   },
   loginSection: {
     marginTop: 80,
@@ -71,6 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: '#326da8',
     textAlign: 'bottom',
+    borderRadius: 20,
   },
   loginButton: {
     padding: 8,
