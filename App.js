@@ -42,7 +42,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     flex: 1,
     paddingTop: Constants.statusBarHeight,
     padding: 8,
