@@ -11,24 +11,31 @@ import { Card } from 'react-native-paper';
 
 export default function App() {
 
+  // Cognito Pool definition instantiation
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-
   const poolData = {
     UserPoolId: 'us-east-1_riQAYckmR',
     ClientId: 't7i2mg2lp5i28nai88ldk635q',
   }
-
   const userPool = new CognitoUserPool(poolData);
 
-  const onSubmit = event => {
+  // click sign in action
+  const onSignIn = event => {
     event.preventDefault();
-    console.log('submitted..');
+    console.log('Signing in..');
+    userPool.signIn()
+  }
+  // click sign up action
+  const onSignUp = event => {
+    event.preventDefault();
+    console.log('Signing up..');
     userPool.signUp(email, password, [], null, (err, data) => {
       if (err) console.error(err);
       console.log(data);
     });
   }
+
   return (
     <View style={styles.container}>
       <Image source={require('./assets/logo.png')} style={styles.logo} />
@@ -56,9 +63,9 @@ export default function App() {
           value={password}
           onChange={event=>setPassword(event.target.value)}
         />
-        <Button style={styles.loginButton} color="pink" title="Sign in" />
+        <Button style={styles.loginButton} color="pink" title="Sign in" onPress={onSignIn} />
         <Text style={styles.loginText}>Don't have an account?</Text>
-        <Button style={styles.loginButton} color="pink" title="Sign up" onPress={onSubmit} />
+        <Button style={styles.loginButton} color="pink" title="Sign up" onPress={onSignUp} />
       </View>
     </View>
   );

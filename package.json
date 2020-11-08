@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
     "amazon-cognito-identity-js": "^4.5.3",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
@@ -17,7 +18,11 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
+    "react-native-gesture-handler": "^1.8.0",
     "react-native-paper": "^3.6.0",
+    "react-native-reanimated": "^1.13.1",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-screens": "^2.13.0",
     "react-native-web": "^0.13.18"
   },
   "devDependencies": {
