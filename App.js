@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Button, Text, View, StyleSheet, TextInput } from 'react-native';
+import { Image, Button, Text, View, StyleSheet, TextInput, SafeAreaView} from 'react-native';
 import { CognitoUserPool } from 'amazon-cognito-identity-js';
 import Constants from 'expo-constants';
 
@@ -37,7 +37,7 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Image source={require('./assets/logo.png')} style={styles.logo} />
       <Text style={styles.logoText}>
         Lets Find &#8226; Lets Talk &#8226; Lets Meet
@@ -67,7 +67,7 @@ export default function App() {
         <Text style={styles.loginText}>Don't have an account?</Text>
         <Button style={styles.loginButton} color="pink" title="Sign up" onPress={onSignUp} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Constants.statusBarHeight,
     padding: 8,
+    
   },
   logo: {
     marginTop: 100,
