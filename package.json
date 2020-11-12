@@ -10,6 +10,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "amazon-cognito-identity-js": "^4.5.3",
+    "aws-amplify": "^3.3.7",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "expo": "^39.0.4",
